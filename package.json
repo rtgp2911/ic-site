@@ -1,0 +1,31 @@
+{
+  "name": "ivan-carluer-library",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "prebuild": "node scripts/build-search-index.mjs",
+    "build:search": "node scripts/build-search-index.mjs",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "fetch:data": "node scripts/fetch-data.mjs",
+    "fetch:series": "node scripts/fetch-series-data.mjs",
+    "fetch:all": "npm run fetch:data && npm run fetch:series"
+  },
+  "dependencies": {
+    "@types/node": "^20.14.10",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "fuse.js": "^7.0.0",
+    "lucide-react": "^0.468.0",
+    "next": "^14.2.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.5.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.4"
+  }
+}

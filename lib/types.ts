@@ -1,0 +1,21 @@
+export type Message = {
+  video_id: string;
+  title: string;
+  url: string;
+  upload_date: string;
+  duration: string;
+  description: string;
+  thumbnail_path: string;
+  transcript_path: string;
+  has_transcript: boolean;
+  resume: string;
+  themes: string[];
+  passages_bibliques: string[];
+  livres_bibliques: string[];
+  chapitres_bibliques: string[];
+  testaments: string[];
+  personnages_bibliques: string[];
+  mots_cles_ia: string[];
+  confiance: string;
+  category: "Puissance 7" | "Célébration";
+};

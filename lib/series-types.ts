@@ -1,0 +1,60 @@
+export type Series = {
+  id: string;
+  slug: string;
+  title: string;
+  summary_short: string;
+  summary_long: string;
+  main_theme: string;
+  secondary_themes: string[];
+  biblical_books: string[];
+  biblical_characters: string[];
+  keywords: string[];
+  who_should_watch: string;
+  what_you_will_learn: string;
+  entry_point: string;
+  series_group: string;
+  episodes_count: number;
+};
+
+export type SeriesEpisode = {
+  series_group: string;
+  playlist_title: string;
+  playlist_index: number;
+  video_id: string;
+  episode_title: string;
+  speaker: string;
+  episode_url: string;
+  thumbnail_hd: string;
+  thumbnail_url: string;
+  upload_date: string;
+  duration_string: string;
+  duration_seconds: number;
+  channel: string;
+  view_count: number;
+  has_transcript: boolean;
+  analysis_status: string;
+  title: string;
+  summary_short: string;
+  summary_long: string;
+  main_theme: string;
+  secondary_themes: string[];
+  biblical_books: string[];
+  testament: string;
+  chapters: string[];
+  verses: string[];
+  biblical_characters: string[];
+  keywords: string[];
+  audience: string;
+  level: string;
+  quote: string;
+  call_to_action: string;
+};
+
+export type SeriesWithEpisodes = Series & {
+  episodes: SeriesEpisode[];
+  episode_titles: string[];
+  levels: string[];
+  has_transcript: boolean;
+  has_analysis: boolean;
+  computed_episodes_count: number;
+};
