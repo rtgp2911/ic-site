@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { SeriesExplorer } from "@/components/SeriesExplorer";
 import { getSeries } from "@/lib/series";
 
@@ -8,21 +9,7 @@ export const metadata: Metadata = {
     "Explorez les séries MLK, recherchez par thème, livre biblique, personnage, mot-clé ou épisode, et retrouvez les parcours associés."
 };
 
-type SeriesPageProps = {
-  searchParams?: {
-    q?: string;
-    group?: string;
-    testament?: string;
-    book?: string;
-    chapter?: string;
-    character?: string;
-    keyword?: string;
-    episodes?: string;
-    sort?: string;
-  };
-};
-
-export default function SeriesPage({ searchParams }: SeriesPageProps) {
+export default function SeriesPage() {
   const series = getSeries();
 
   return (
@@ -39,7 +26,9 @@ export default function SeriesPage({ searchParams }: SeriesPageProps) {
       </section>
 
       {series.length > 0 ? (
-        <SeriesExplorer series={series} initialFilters={searchParams} />
+        <Suspense fallback={<div className="series-loading">Chargement des séries...</div>}>
+          <SeriesExplorer series={series} />
+        </Suspense>
       ) : (
         <section className="series-empty">
           <h2>Les séries arrivent bientôt</h2>

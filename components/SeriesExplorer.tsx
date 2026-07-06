@@ -1,7 +1,8 @@
 "use client";
 
 import Fuse from "fuse.js";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { SeriesCard } from "@/components/SeriesCard";
 import { SearchBar } from "@/components/SearchBar";
 import { isPuissance7Series } from "@/lib/series";
@@ -74,11 +75,25 @@ function matchReasons(paths: Array<string | number>[] | undefined) {
 }
 
 export function SeriesExplorer({ series, initialFilters }: SeriesExplorerProps) {
-  const [query, setQuery] = useState(initialFilters?.q ?? "");
-  const [sort, setSort] = useState<SortMode>(
-    initialFilters?.sort === "recent" || initialFilters?.sort === "oldest" ? initialFilters.sort : "alpha"
+  const searchParams = useSearchParams();
+  const urlFilters = useMemo(
+    () => ({
+      q: searchParams.get("q") ?? initialFilters?.q ?? "",
+      group: searchParams.get("group") ?? initialFilters?.group ?? "",
+      sort: searchParams.get("sort") ?? initialFilters?.sort ?? ""
+    }),
+    [initialFilters?.group, initialFilters?.q, initialFilters?.sort, searchParams]
   );
-  const group = initialFilters?.group ?? "";
+  const [query, setQuery] = useState(urlFilters.q);
+  const [sort, setSort] = useState<SortMode>(
+    urlFilters.sort === "recent" || urlFilters.sort === "oldest" ? urlFilters.sort : "alpha"
+  );
+  const group = urlFilters.group;
+
+  useEffect(() => {
+    setQuery(urlFilters.q);
+    setSort(urlFilters.sort === "recent" || urlFilters.sort === "oldest" ? urlFilters.sort : "alpha");
+  }, [urlFilters.q, urlFilters.sort]);
 
   const fuse = useMemo(
     () =>
