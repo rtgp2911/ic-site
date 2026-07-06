@@ -3959,3 +3959,170 @@ p {
     padding: 16px;
   }
 }
+
+/* Final responsive polish: full-card click targets and mobile readability */
+.message-card-link,
+.search-result-card,
+.series-episode-card {
+  color: inherit;
+  text-decoration: none;
+}
+
+.message-card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.message-card-link:focus-visible,
+.search-result-card:focus-visible,
+.series-episode-card:focus-visible {
+  outline: 3px solid rgba(10, 99, 255, 0.28);
+  outline-offset: 4px;
+}
+
+.message-card-link .tag-link,
+.message-card-link .message-date-link {
+  cursor: inherit;
+}
+
+.series-episode-card {
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.series-episode-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0, 0, 0, 0.14);
+  box-shadow: 0 22px 48px rgba(15, 23, 42, 0.08);
+}
+
+.series-episode-thumb img {
+  transition: transform 0.35s ease;
+}
+
+.series-episode-card:hover .series-episode-thumb img {
+  transform: scale(1.035);
+}
+
+.series-episode-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 38px;
+  border-radius: 999px;
+  background: #000;
+  color: #fff;
+  padding: 0 13px;
+  font-size: 0.88rem;
+  font-weight: 760;
+}
+
+.ivan-intro-card-section,
+.mlk-intro-card-section {
+  padding-top: clamp(34px, 5vw, 72px);
+}
+
+@media (max-width: 720px) {
+  .watch-grid .section-grid,
+  .repere-section .section-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .watch-grid .section-grid > *,
+  .repere-section .section-grid > * {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .repere-section .tag,
+  .repere-section .tag-link,
+  .repere-section .summary-tags > *,
+  .repere-section .tags > * {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .series-episode-card,
+  .search-result-card,
+  .message-card {
+    width: 100%;
+  }
+
+  .series-episode-actions .series-episode-primary,
+  .series-episode-primary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .ivan-intro-card-section,
+  .mlk-intro-card-section {
+    padding-top: 30px;
+  }
+
+  .ivan-intro-card,
+  .mlk-intro-card {
+    border-radius: 22px;
+    padding: 22px;
+  }
+
+  .ivan-intro-card p:not(.eyebrow),
+  .mlk-intro-card p:not(.eyebrow) {
+    font-size: 1rem;
+    line-height: 1.58;
+  }
+}
+
+@media (max-width: 640px) {
+  .search-hero-shell {
+    min-height: auto;
+    height: auto;
+    overflow: visible;
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 18px;
+  }
+
+  .search-hero-copy {
+    max-width: none;
+    min-width: 0;
+    padding: 0;
+  }
+
+  .search-hero-copy h1 {
+    max-width: 100%;
+    font-size: clamp(2rem, 10vw, 2.85rem);
+    line-height: 1;
+  }
+
+  .search-hero-copy p {
+    max-width: 100%;
+  }
+
+  .search-hero-thumbs {
+    position: relative;
+    inset: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    width: 100%;
+    min-height: 132px;
+    height: auto;
+    margin: 0;
+    opacity: 0.92;
+  }
+
+  .search-hero-thumbs figure,
+  .search-hero-thumbs figure:first-child,
+  .search-hero-thumbs figure:nth-child(2),
+  .search-hero-thumbs figure:nth-child(3) {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    transform: none;
+  }
+}
