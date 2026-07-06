@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Play, Youtube } from "lucide-react";
+import { ArrowRight, Play } from "lucide-react";
 import type { SeriesEpisode } from "@/lib/series-types";
 import { normalizeVideoId } from "@/lib/format";
 import {
@@ -29,8 +29,8 @@ export function SeriesEpisodeCard({ episode, compact = false }: SeriesEpisodeCar
   const summary = isDisplayableSeriesValue(episode.summary_short) ? episode.summary_short : "";
 
   return (
-    <article className={`series-episode-card${compact ? " compact" : ""}`}>
-      <Link className="series-episode-thumb" href={messageHref} aria-label={`Voir ${title}`}>
+    <Link className={`series-episode-card${compact ? " compact" : ""}`} href={messageHref} aria-label={`Voir l'épisode : ${title}`}>
+      <span className="series-episode-thumb">
         {thumbnail ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img src={thumbnail} alt={`Miniature de l'épisode : ${title}`} loading="lazy" />
@@ -40,7 +40,7 @@ export function SeriesEpisodeCard({ episode, compact = false }: SeriesEpisodeCar
         <span>
           <Play size={15} fill="currentColor" />
         </span>
-      </Link>
+      </span>
       <div className="series-episode-content">
         <div className="series-episode-meta">
           {episode.playlist_index > 0 && <span>Épisode {episode.playlist_index}</span>}
@@ -56,18 +56,12 @@ export function SeriesEpisodeCard({ episode, compact = false }: SeriesEpisodeCar
           ))}
         </div>
         <div className="series-episode-actions">
-          <Link href={messageHref}>
+          <span className="series-episode-primary">
             Voir la vidéo
             <ArrowRight size={15} />
-          </Link>
-          {episode.episode_url && (
-            <a href={episode.episode_url} target="_blank" rel="noreferrer">
-              YouTube
-              <Youtube size={15} />
-            </a>
-          )}
+          </span>
         </div>
       </div>
-    </article>
+    </Link>
   );
 }

@@ -279,8 +279,8 @@ export function MessageExplorer({ messages, facets }: { messages: Message[]; fac
             const videoId = normalizeVideoId(message.video_id);
             const relevance = getRelevance(message, query);
             return (
-              <article key={message.video_id} className="search-result-card">
-                <Link className="search-result-media" href={`/messages/${videoId}`} aria-label={`Voir ${message.title}`}>
+              <Link key={message.video_id} className="search-result-card" href={`/messages/${videoId}`} aria-label={`Voir le message : ${message.title}`}>
+                <span className="search-result-media">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={thumbnailUrl(message.video_id, message.thumbnail_path)}
@@ -294,16 +294,14 @@ export function MessageExplorer({ messages, facets }: { messages: Message[]; fac
                   <span>
                     <Play size={16} fill="currentColor" />
                   </span>
-                </Link>
+                </span>
                 <div className="search-result-body">
                   <div className="search-result-meta">
                     <span>{formatDate(message.upload_date)}</span>
                     {message.themes[0] && <span>{message.themes[0]}</span>}
                     {message.livres_bibliques[0] && <span>{message.livres_bibliques[0]}</span>}
                   </div>
-                  <h2>
-                    <Link href={`/messages/${videoId}`}>{message.title}</Link>
-                  </h2>
+                  <h2>{message.title}</h2>
                   <p className="search-snippet">{getSearchSnippet(message, query)}</p>
                   {relevance.length > 0 && (
                     <div className="relevance-row" aria-label="Correspondances trouvées">
@@ -316,7 +314,7 @@ export function MessageExplorer({ messages, facets }: { messages: Message[]; fac
                     </div>
                   )}
                 </div>
-              </article>
+              </Link>
             );
           })}
         </div>
