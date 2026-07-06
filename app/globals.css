@@ -4024,6 +4024,12 @@ p {
   padding-top: clamp(78px, 7vw, 118px);
 }
 
+.ivan-public-hero + .ivan-intro-card-section,
+.mlk-page-hero + .mlk-intro-card-section {
+  margin-top: clamp(78px, 7vw, 118px);
+  padding-top: 0 !important;
+}
+
 @media (max-width: 720px) {
   .watch-grid .section-grid,
   .repere-section .section-grid {
@@ -4060,6 +4066,12 @@ p {
   .ivan-intro-card-section,
   .mlk-intro-card-section {
     padding-top: 62px;
+  }
+
+  .ivan-public-hero + .ivan-intro-card-section,
+  .mlk-page-hero + .mlk-intro-card-section {
+    margin-top: 62px;
+    padding-top: 0 !important;
   }
 
   .ivan-intro-card,
