@@ -4148,3 +4148,10 @@ p {
     transform: none;
   }
 }
+
+@media (max-width: 768px) {
+  .ivan-public-page .ivan-intro-card-section,
+  .ivan-public-hero + .ivan-intro-card-section {
+    margin-top: clamp(168px, 32vw, 216px) !important;
+  }
+}
