@@ -51,56 +51,6 @@
     "episodes_count": 5
   },
   {
-    "id": "Ivan Carluer à EMCI TV",
-    "slug": "predications-d-ivan-carluer",
-    "title": "Prédications d'Ivan Carluer",
-    "summary_short": "Collection de messages pratiques couvrant la prière, l'autorité spirituelle, les relations et la délivrance. Des enseignements ancrés dans la Bible et l'expérience personnelle du pasteur.",
-    "summary_long": "Série de prédications et de témoignages qui aident à passer de la religion à une relation vivante avec Dieu, à exercer une autorité saine et à discerner quand rester ou partir dans les relations et les engagements. Les thèmes récurrents sont la prière, le pardon, la stabilité émotionnelle, la gouvernance d'équipe et la délivrance du légalisme ou de la manipulation. Mélange de méditations bibliques, d'exemples concrets et de récits personnels pour des applications pastorales et quotidiennes.",
-    "main_theme": "Accompagner la vie chrétienne concrète : relation filiale avec Dieu, autorité intérieure, relations humaines saines et délivrance spirituelle.",
-    "secondary_themes": [
-      "Prière et vie spirituelle",
-      "Pardon et restauration",
-      "Autorité et humilité",
-      "Discernement et décisions (quitter/tenir)",
-      "Délivrance du légalisme et de la manipulation",
-      "Leadership et travail d'équipe"
-    ],
-    "biblical_books": [
-      "Luc",
-      "Matthieu",
-      "Éphésiens",
-      "Galates",
-      "2 Samuel",
-      "Néhémie"
-    ],
-    "biblical_characters": [
-      "Pierre",
-      "Jésus",
-      "Paul",
-      "Barnabas",
-      "Jean-Marc",
-      "Nathan",
-      "Corneille"
-    ],
-    "keywords": [
-      "prière",
-      "pardon",
-      "autorité",
-      "humilité",
-      "stabilité émotionnelle",
-      "discernement",
-      "quitter",
-      "manipulation spirituelle",
-      "tentation",
-      "vocation"
-    ],
-    "who_should_watch": "Chrétiens et leaders cherchant des enseignements pratiques pour vivre leur foi, gérer leurs relations et exercer une autorité saine.",
-    "what_you_will_learn": "Des clés pour discerner quand rester ou partir et comment exercer une autorité fondée sur l'humilité, le pardon et la stabilité émotionnelle. Des conseils pour structurer la vie de prière, se libérer du légalisme et prévenir la manipulation spirituelle.",
-    "entry_point": "De la religion à une relation vivante - Vie de Foi - Ivan Carluer",
-    "series_group": "Ivan Carluer à EMCI TV",
-    "episodes_count": 21
-  },
-  {
     "id": "Après tout ce qu'on a vécu ensemble...",
     "slug": "apres-tout-ce-qu-on-a-vecu-ensemble",
     "title": "Après tout ce qu'on a vécu ensemble…",
@@ -663,7 +613,7 @@
   {
     "id": "La peur de perdre",
     "slug": "la-peur-de-perdre",
-    "title": "La Peur De Perdre",
+    "title": "La Peur de perdre",
     "summary_short": "Une série qui appelle à vaincre la peur de perdre en choisissant l'obéissance à Dieu plutôt que la crainte. Elle montre comment la foi conduit à la mission, à l'action du Saint‑Esprit et à une générosité qui dure.",
     "summary_long": "À partir du livre des Actes, les prédications montrent comment les premières communautés ont partagé leurs biens et comment la conversion de Saul illustre les pertes qui ouvrent des portes. La série exhorte à transformer argent et temps en amour actif, à l'exemple de Barnabas qui vendit son champ. Le message central est que l'obéissance et la générosité mènent à la puissance du Saint‑Esprit et à une mission fructueuse malgré la peur de perdre.",
     "main_theme": "Vaincre la peur de perdre par l'obéissance, la foi et la générosité.",
@@ -705,7 +655,7 @@
   {
     "id": "Engrenage",
     "slug": "engrenage",
-    "title": "ENGRENAGE",
+    "title": "Engrenage",
     "summary_short": "La série explore comment différents péchés s'enchaînent pour provoquer un décrochage spirituel en prenant pour exemples les fils de David. Elle appelle à reconnaître les mécanismes, protéger les victimes et chercher la restauration en Jésus.",
     "summary_long": "Chaque épisode étudie un fils de David pour montrer comment la luxure, l'orgueil et l'amertume deviennent des engrenages destructeurs menant à la chute. Les prédicateurs offrent une analyse biblique et des conseils pratiques pour repérer les signes, intervenir et protéger les vulnérables. L'accent est mis sur la discipline spirituelle, le rejet de la vengeance et la guérison par Christ.",
     "main_theme": "Comment les péchés forment des engrenages qui entraînent le décrochage spirituel et la destruction personnelle.",
@@ -1162,7 +1112,7 @@
   {
     "id": "Servir Dieu par mon travail",
     "slug": "servir-dieu-par-mon-travail",
-    "title": "Servir Dieu par mon Travail",
+    "title": "Servir Dieu par mon travail",
     "summary_short": "Série en trois volets qui invite les croyants à considérer leur métier comme un lieu de service et de louange. Illustrations prises de l'apôtre Paul, fabricant de tentes, et de Lydie à Philippes.",
     "summary_long": "Ivan Carluer explique comment transformer le travail quotidien en ministère en prenant Paul et Lydie comme exemples. Il encourage l'excellence, l'autonomie et l'amour comme manières de bénir les autres par son métier. La série propose des pistes pratiques pour artisans, soignants et commerçants.",
     "main_theme": "Intégrer la foi et le travail en considérant son métier comme un lieu de service à Dieu.",
@@ -1479,7 +1429,7 @@
   {
     "id": "Discerner la voix de Dieu",
     "slug": "discerner-la-voix-de-dieu",
-    "title": "Discerner La voix de Dieu",
+    "title": "Discerner la voix de Dieu",
     "summary_short": "Cette série enseigne à distinguer la vraie voix de Dieu des voix extérieures et des émotions. Elle propose des clés pour calmer l'âme, régler son «récepteur» émotionnel et accueillir le Saint‑Esprit.",
     "summary_long": "Les deux épisodes guident pas à pas pour reconnaître quand une manifestation n'est pas la parole divine et pour ajuster ses dispositions intérieures. Ils insistent sur l'importance du silence, de la communion et de l'accueil du Saint‑Esprit pour mieux entendre. Le premier pose les fondations pratiques; le second développe l'idée d'accepter et de laisser grandir le Saint‑Esprit en nous.",
     "main_theme": "Apprendre à discerner la voix de Dieu des voix émotionnelles et extérieures.",
