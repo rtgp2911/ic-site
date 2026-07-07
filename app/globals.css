@@ -4024,7 +4024,11 @@ p {
   padding-top: clamp(78px, 7vw, 118px);
 }
 
-.ivan-public-hero + .ivan-intro-card-section,
+.ivan-public-hero + .ivan-intro-card-section {
+  margin-top: clamp(86px, 7.7vw, 130px);
+  padding-top: 0 !important;
+}
+
 .mlk-page-hero + .mlk-intro-card-section {
   margin-top: clamp(78px, 7vw, 118px);
   padding-top: 0 !important;
@@ -4068,7 +4072,11 @@ p {
     padding-top: 62px;
   }
 
-  .ivan-public-hero + .ivan-intro-card-section,
+  .ivan-public-hero + .ivan-intro-card-section {
+    margin-top: 68px;
+    padding-top: 0 !important;
+  }
+
   .mlk-page-hero + .mlk-intro-card-section {
     margin-top: 62px;
     padding-top: 0 !important;
