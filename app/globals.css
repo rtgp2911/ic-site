@@ -4026,12 +4026,12 @@ p {
 
 .ivan-public-page .ivan-intro-card-section,
 .ivan-public-hero + .ivan-intro-card-section {
-  margin-top: clamp(150px, 11vw, 190px) !important;
+  margin-top: clamp(135px, 10vw, 171px) !important;
   padding-top: 0 !important;
 }
 
 .mlk-page-hero + .mlk-intro-card-section {
-  margin-top: clamp(78px, 7vw, 118px);
+  margin-top: clamp(70px, 6.3vw, 106px);
   padding-top: 0 !important;
 }
 
